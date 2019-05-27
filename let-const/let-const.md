@@ -1,4 +1,4 @@
-# UNDERSTANDING let AND const DECLEARATIONS.
+# Understanding Let and Const Declearations.
 
 Prior to ES5 varibles were decleared with the keyword var. Which was pretty good but has a down side.
 In Javascript when variables are decleared with the keyword var it places it in the global context with an initial value of undefined, until they are used before it assigns in original value to it.
@@ -45,7 +45,7 @@ function checkVar(value) {
 
 This is very useful and prevents buggy codes.
 
-## USING THE LET KEYWORD
+## Using the Let Keyword
 
 Now you understand why we need the let keyword but how exactly do we use the them?
 
@@ -86,7 +86,7 @@ console.log(name); // outputs John
 
 ```
 
-## USING THE CONST KEYWORD
+## Using the Const Keyword
 
 The const keyword behaves similarly as the let keyword in that they are not available outside their scope. Just as the name sounds the const keyword are like constansts. Variables decleared with it can not be redecleared or reassigned.
 
@@ -163,7 +163,7 @@ The number array and the names object cannot be reassigned or redecleared with c
 
 ```
 
-## use cases of let and const 
+## Use Cases of Let and Const 
 There are several use cases of let and const, one of which could be 
 
 ```
@@ -202,7 +202,7 @@ As expected the i can not be accessed here.
 
 Note you cannot use const to declear i variable because const variable can not be reassigned.
 
-## CONCLUSION
+## Conclusion
 
 Good code is one which is less buggy and less prone to bugs. The use of the var keyword can make your codes prone to bugs.        
 In modern Javascript it is adviceable to use mainly const in your code and use let only when you know that the variable will be updating it values.
