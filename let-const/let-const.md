@@ -1,4 +1,4 @@
-# Understanding let and const declerations.
+# UNDERSTANDING let AND const DECLEARATIONS.
 
 Prior to ES5 varibles were decleared with the keyword var. Which was pretty good but has a down side.
 In Javascript when variables are decleared with the keyword var it places it in the global context with an initial value of undefined, until they are used before it assigns in original value to it.
@@ -108,7 +108,7 @@ name = 'John';
 console.log(name); // TypeError: Assignment to constant variable.
 ```
 
-**Watch out**
+**WATCH OUT!!!**
 
 When using const in an array or an object their values can be changed.
 
