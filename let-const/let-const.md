@@ -21,7 +21,11 @@ function checkVar(value) {
 
 From the above you see that the a variable decleared is available in all scopes.
 
-This down side has been solved with the use of the let and const keyword. This keywords are blocked scoped, that is the variables decleared with it are only available on their own scope.
+This down side has been solved with the use of the let and const keyword. This keywords are blocked scoped, that is the variables decleared with it are only available on their own scope.      
+
+A block scope can be simply any where you see opening and curly braces {}, be it a function, an if statement, loop etc. Variables decleared with let or const in them are only available in there.        
+
+Javascript has its own scope called the global scope variables decleared there are avilable to all members.
 
 ```
 
@@ -159,4 +163,46 @@ The number array and the names object cannot be reassigned or redecleared with c
 
 ```
 
+## use cases of let and const 
+There are several use cases of let and const, one of which could be 
 
+```
+var num = 0;
+
+for (var i = 0; i < 5; i++) {
+  num += i;
+}
+
+console.log(num); // outputs 10
+
+console.log(i); // Oops outputs 5
+```
+
+
+You may have thought we might get an error by trying to console i outside. Remember that the var keyword is available everywhere in the JS scope.     
+This nuance can sometimes make codes difficult to debug.
+
+But what if we use the let keyword here?
+
+```
+var num = 0;
+
+for (let i = 0; i < 5; i++) {
+  num += i;
+}
+
+console.log(num); // outputs 10
+
+console.log(i); // ReferenceError: i is not defined
+
+```
+
+As expected the i can not be accessed here.     
+
+
+Note you cannot use const to declear i variable because const variable can not be reassigned.
+
+## CONCLUSION
+
+Good code is one which is less buggy and less prone to bugs. The use of the var keyword can make your codes prone to bugs.        
+In modern Javascript it is adviceable to use mainly const in your code and use let only when you know that the variable will be updating it values.
