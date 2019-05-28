@@ -3,7 +3,7 @@
 Prior to ES5 varibles were decleared with the keyword var. Which was pretty good but has a down side.
 In Javascript when variables are decleared with the keyword var it places it in the global context with an initial value of undefined, until they are used before it assigns in original value to it.
 
-```
+```js
 
 function checkVar(value) {
   console.log(a) // a is available here as undefined
@@ -27,7 +27,7 @@ A block scope can be simply any where you see opening and curly braces {}, be it
 
 Javascript has its own scope called the global scope variables decleared there are avilable to all members.
 
-```
+```js
 
 function checkVar(value) {
   console.log(a) // syntax error a is not defined
@@ -51,7 +51,7 @@ Now you understand why we need the let keyword but how exactly do we use the the
 
 Pretty straight forword the let keyword is used the same way as the var but the let does not allow for redeclearation of variables.
 
-```
+```js
 //Redeclearing the var variable
 
 var number = 4;
@@ -62,7 +62,7 @@ console.log(number); // outputs 5;
 
 ```
 
-```
+```js
 //Redeclearing the let variable
 
 let name = 'Charles';
@@ -90,7 +90,7 @@ console.log(name); // outputs John
 
 The const keyword behaves similarly as the let keyword in that they are not available outside their scope. Just as the name sounds the const keyword are like constansts. Variables decleared with it can not be redecleared or reassigned.
 
-```
+```js
 // Redeclearing the const variable
 const number = 5;
 console.log(number);
@@ -99,7 +99,7 @@ const numnber = 7;
 console.log(number); // SyntaxError: Identifier 'number' has already been      declared
 ```
 
-```
+```js
 // Reassigning the const variable
 const name = 'Charles';
 console.log(name); // outputs Charles
@@ -112,7 +112,7 @@ console.log(name); // TypeError: Assignment to constant variable.
 
 When using const in an array or an object their values can be changed.
 
-```
+```js
   // Array
   const numArray = [1, 2, 3, 4, 5];
 
@@ -141,7 +141,7 @@ The changes made on the array and object did not throw any error. Note that we c
 
 The number array and the names object cannot be reassigned or redecleared with const.
 
-```
+```js
 // Reassigning arrays with const
 
   const numArray = [1, 2, 3, 4, 5];
@@ -166,7 +166,7 @@ The number array and the names object cannot be reassigned or redecleared with c
 ## Use Cases of Let and Const 
 There are several use cases of let and const, one of which could be 
 
-```
+```js
 var num = 0;
 
 for (var i = 0; i < 5; i++) {
@@ -184,7 +184,7 @@ This nuance can sometimes make codes difficult to debug.
 
 But what if we use the let keyword here?
 
-```
+```js
 var num = 0;
 
 for (let i = 0; i < 5; i++) {
